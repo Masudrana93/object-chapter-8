@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // ******অবজেক্টের তালা-চাবি*****
+
+        //সব (keys/properties)
+
+        //object এর সবগুলো keys/properties যেভাবে দেখা যায়।  object.keys()
+
+        const computer = {
+            brand: "dell",
+            price: 60000,
+            precessor: "intel",
+            ssd: '512gb'
+        };
+        const keys = Object.keys(computer);
+        console.log(keys);
+
+        //সব মান (values)
+
+        //object এর সবগুলো values যেভাবে দেখা যায়।  object.values()
+
+        const values = Object.values(computer);
+        console.log(values);
+
+        // name প্রোপার্টি আছে কি না, চেক কর।
+
+        const profile = {
+            name: "Rahim",
+            age: 28,
+            city: 'Dhaka',
+        };
+        const profileKeys = Object.keys(profile);
+        const hasName = profileKeys.includes("name");
+        console.log(hasName);
+
+
+        // if-else প্রোপার্টি চেক করা যায়।
+
+        const amarprofile = {
+            name: "karim",
+            age: 25,
+            city: 'sylhet',
+        };
+        if ("email" in amarprofile) {
+            console.log('email exists');
+        } else {
+            console.log("No email. No Spam");
+        }
+
+
+
+        //**** practice -important****
+
+        const bangladesh = {
+            divisions: 8,
+            districts: 64,
+            upozilas: 495,
+            union: 4578,
+
+        };
+        
+        const bangladeshEntries = Object.entries(bangladesh);
+
+         for(const [key, value] of bangladeshEntries ){
+            console.log(key, ':', value);
+            console.log(key);
+            console.log(value);
+         }
+
+         for(const [key, value] of bangladeshEntries ){
+            console.log(key);
+         }
+
+         for(const [key, value] of bangladeshEntries ){
+            console.log(value);
+         }
+//****practice - important****
+         const englishCenters ={
+                mouchak: "ATM",
+                firmgate: "ABC",
+                uttara: "CTM",
+                Gulshan: "WEll"
+         };
+
+         const singleEntries = Object.entries(englishCenters);
+
+         for(const [keys, values] of singleEntries){
+            
+            console.log(keys, ':', values);
+         }
+         for(const [keys, values] of singleEntries){
+            console.log(values);
+           
+         }
+
+         for(const [keys, values] of singleEntries){
+            console.log(keys);
+           
+         }
+
+
+         //practice- important
+
+         const products = {
+            bag: 10,
+            shoe: 25,
+            mobile: 12,
+            laptop: 75,
+         };
+         const productsList = Object.entries(products);
+         
+         for(const [key, value] of productsList){
+            
+            console.log(key);
+         };
+         
+         for(const [key, value] of productsList){
+            console.log(key,":", value);
+         };
+
+        let sum = 0;
+         for(let [key, value] of productsList){
+            sum += value;
+           
+         };
+          console.log(sum);
+
+
+
+
+    </script>
+
+</body>
+
+</html>
