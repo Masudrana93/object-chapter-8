@@ -62,6 +62,61 @@ const headphone = {
 headphone.warranty = "1 year";
 console.log(headphone);
 
+//2. const player = {name: Messi, goals: 800, club: Inter Miami}; object.freeze মেথড ব্যবহার করে অবজেক্ট ফ্রিজ কর। তারপর নতুন প্রোপার্টি যোগ করে দেখ, কাজ করে কি না ।
+const player = {
+    name: 'Messi', 
+    goals: 800, 
+    club: 'Inter Miami',
+};
+Object.freeze(player);
+player.age = 35;
+console.log(player);
+
+
+//3.  const book = { title: Harry Potter, author: JK Rowling, pages: 500}; object.seal() ব্যবহার করে অবজেক্ট সিল কর। তারপর ‍author প্রোপার্টি চেজ্ঞ করে দেখ।
+
+const book= {
+    title: 'Harry Potter',
+    author: 'JK Rowling',
+    pages: 500,
+};
+Object.seal(book);
+book.author = 'Masud Rana';
+console.log(book);
+
+//4. একটা gadget অবজেক্ট বানা, যার মধ্যে  name: 'iPhone', price: 120000, আর color: "Black" থাকবে। delete ব্যবহার price করে ডিলিট কর।
+
+const gadget ={
+    name: "iPhone",
+    price: 120000,
+    color: "Black"
+};
+delete gadget.price;
+console.log(gadget);
+
+//5. একটা animal অবজেক্ট বানা, যার মধ্যে name: "Tiger", location: "Sundarban" থাকবে। এখন এমন কিছু কর, যাতে টাইগারের লোকেশন চেইজ্ঞ করা না যায়।
+
+const animal={
+    name: "Tiger",
+    location: "Sundarban",
+};
+Object.freeze(animal);
+animal.location= "Dhaka";
+console.log(animal);
+
+//6. const food = { name:"Pizza", price: 500, size: "large"}; এমন কিছু কর, যাতে food-এর মধ্যে নতুন প্রোপার্টি যোগ করা যাবে না। তবে চাইলে দাম বাড়ানো বা কমানো যাবে।
+
+const food ={
+    name:"Pizza", 
+    price: 500,
+    size: "large",
+};
+Object.seal(food);
+food.price = 600;
+food.test = "spiece";
+console.log(food);
+
+
 
 
 
